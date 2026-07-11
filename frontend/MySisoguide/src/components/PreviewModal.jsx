@@ -649,7 +649,8 @@ useEffect(() => {
 
   if (!paper) return null;
 
-  const fileUrl = `${BASEURL}${paper.file}`;
+  // const fileUrl = `${BASEURL}${paper.file}`;
+  const fileUrl = paper.file;
 
   const extension = paper.file
     .split("?")[0]

@@ -91,7 +91,7 @@ export default function App() {
 
         <Route path="/" element={<Home />} />
 
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses" element={<SuperAdminDashboard />} />
 
         <Route
           path="/subjects/:courseId"
