@@ -5,7 +5,7 @@ import PaperModal from "../../components/resourcemodal/PaperModal";
 import { getAccessToken } from "../../utils/auth";
 import SuperadminPapercard from "../../components/resourcemodal/SuperadminPapercard";
 import PreviewModal from "../../components/PreviewModal";
-import DeleteConfirmModal from "../../components/resourcemodal/DeleteCofirmModal";
+import DeleteConfirmModal from "../../components/resourcemodal/DeleteConfirmModal";
 
 export default function PapersTab() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;
