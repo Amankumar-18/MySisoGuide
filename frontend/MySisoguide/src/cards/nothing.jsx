@@ -10,7 +10,7 @@ import {
 
 import PreviewModal from "../preview/PreviewModal";
 
-export default function PaperCard({
+export default function Papar({
   paper,
   onEdit,
   onDelete,
