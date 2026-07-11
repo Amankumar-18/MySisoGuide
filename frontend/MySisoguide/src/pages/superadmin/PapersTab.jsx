@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Upload } from "lucide-react";
 
-import PaperModal from "../../components/ResourceModal/PaperModal";
+import PaperModal from "../../components/resourcemodal/PaperModal";
 import { getAccessToken } from "../../utils/auth";
 import SuperadminPapercard from "../../components/resourcemodal/SuperadminPapercard";
 import PreviewModal from "../../components/PreviewModal";
