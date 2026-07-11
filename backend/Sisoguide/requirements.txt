@@ -24,5 +24,6 @@ tzdata==2026.2
 virtualenv==21.2.0
 websocket==0.2.1
 websockets==15.0.1
+whitenoise==6.12.0
 zope.event==6.1
 zope.interface==8.1.1
