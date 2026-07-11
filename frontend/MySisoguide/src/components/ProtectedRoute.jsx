@@ -21,6 +21,9 @@ export default function ProtectedRoute({
     allowedRoles.length > 0 &&
     !allowedRoles.includes(user.role)
   ) {
+    console.log("Role:", user.role);
+    console.log("Allowed:", allowedRoles);
+
     return <Navigate to="/" replace />;
   }
 
