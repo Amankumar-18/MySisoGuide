@@ -38,8 +38,12 @@ SECRET_KEY = 'django-insecure-&m1y4iszb)h$v)lmks9(#hgi*eukuu^!)cnfyld$wn_pg0s)ee
 # DEBUG = True
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["*"]
-
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "mysisoguide.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Application definition
 
