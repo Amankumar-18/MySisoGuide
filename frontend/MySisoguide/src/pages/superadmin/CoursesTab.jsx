@@ -3,7 +3,7 @@ import { Plus, Edit2, Trash2, Search } from "lucide-react";
 
 import CourseModal from "../../components/ResourceModal/CourseModal";
 import { getAccessToken } from "../../utils/auth";
-import DeleteConfirmModal from "../../components/resourcemodal/DeleteConfirmModal";
+import DeleteConfirmModal from "../../components/ResourceModal/DeleteConfirmModal";
 
 export default function CoursesTab() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;
