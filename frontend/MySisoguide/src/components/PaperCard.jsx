@@ -5,7 +5,7 @@ export default function PaperCard({
   BASEURL,
   onPreview,
 }) {
-  const fileUrl = `${BASEURL}${paper.file}`;
+  const fileUrl = paper.file;
 
   const handleDownload = async () => {
     try {

@@ -12,7 +12,7 @@ export default function SuperadminPapercard({
     onEdit,
     onDelete,
 }) {
-  const fileUrl = `${BASEURL}${paper.file}`;
+  const fileUrl = paper.file;
 
   
    
