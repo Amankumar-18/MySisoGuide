@@ -7,7 +7,7 @@ import {
   Search,
   Trash2
 } from "lucide-react";
-import DeleteConfirmModal from "../../components/ResourceModal/DeleteConfirmModal";
+import DeleteConfirmModal from "../../components/resourcemodal/DeleteConfirmModal";
 
 import { getAccessToken } from "../../utils/auth";
 

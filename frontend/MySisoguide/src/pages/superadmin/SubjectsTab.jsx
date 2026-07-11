@@ -167,9 +167,9 @@
 
 import { useEffect, useState } from "react";
 import { Plus, Edit2, Trash2, Search } from "lucide-react";
-import SubjectModal from "../../components/ResourceModal/SubjectModal";
+import SubjectModal from "../../components/resourcemodal/SubjectModal";
 import { getAccessToken } from "../../utils/auth";
-import DeleteConfirmModal from "../../components/ResourceModal/DeleteConfirmModal";
+import DeleteConfirmModal from "../../components/resourcemodal/DeleteConfirmModal";
 
 export default function SubjectsTab() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;

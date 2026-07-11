@@ -1,0 +1,9 @@
+[35msrc/components/resourcemodal/DeleteConfirmModal.jsx[m[36m:[mexport default function [1;31mDeleteConfirmModal[m({ isOpen,title="Delete Item",message="Are you sure you want to deletethis item?",onCancel,onConfirm,}) {
+[35msrc/pages/superadmin/CoursesTab.jsx[m[36m:[mimport [1;31mDeleteConfirmModal[m from "../../components/ResourceModal/[1;31mDeleteConfirmModal[m";
+[35msrc/pages/superadmin/CoursesTab.jsx[m[36m:[m      <[1;31mDeleteConfirmModal[m
+[35msrc/pages/superadmin/PapersTab.jsx[m[36m:[mimport [1;31mDeleteConfirmModal[m from "../../components/ResourceModal/[1;31mDeleteConfirmModal[m";
+[35msrc/pages/superadmin/PapersTab.jsx[m[36m:[m        <[1;31mDeleteConfirmModal[m
+[35msrc/pages/superadmin/SubjectsTab.jsx[m[36m:[mimport [1;31mDeleteConfirmModal[m from "../../components/ResourceModal/[1;31mDeleteConfirmModal[m";
+[35msrc/pages/superadmin/SubjectsTab.jsx[m[36m:[m      <[1;31mDeleteConfirmModal[m
+[35msrc/pages/superadmin/UsersTab.jsx[m[36m:[mimport [1;31mDeleteConfirmModal[m from "../../components/ResourceModal/[1;31mDeleteConfirmModal[m";
+[35msrc/pages/superadmin/UsersTab.jsx[m[36m:[m      <[1;31mDeleteConfirmModal[m

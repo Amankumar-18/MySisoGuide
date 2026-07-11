@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Upload } from "lucide-react";
 
-import PaperModal from "../../components/ResourceModal/PaperModal";
+import PaperModal from "../../components/resourcemodal/PaperModal";
 import { getAccessToken } from "../../utils/auth";
-import SuperadminPapercard from "../../components/ResourceModal/SuperadminPapercard";
+import SuperadminPapercard from "../../components/resourcemodal/SuperadminPapercard";
 import PreviewModal from "../../components/PreviewModal";
-import DeleteConfirmModal from "../../components/ResourceModal/DeleteConfirmModal";
+import DeleteConfirmModal from "../../components/resourcemodal/DeleteConfirmModal";
 
 export default function PapersTab() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;
