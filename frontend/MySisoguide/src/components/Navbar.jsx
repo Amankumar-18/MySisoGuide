@@ -229,12 +229,14 @@ export default function Navbar() {
 
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
 
-            <div className="mobile-profile-header ">
-              <span className="avatar ">
-                {profile?.username?.charAt(0).toUpperCase() || "U"}
-              </span>
-              <span>{profile?.first_name} {profile?.last_name}</span>
-           </div>
+        {isLoggedIn && (
+          <div className="mobile-profile-header">
+            <span className="avatar">
+              {profile?.username?.charAt(0).toUpperCase() || "U"}
+            </span>
+            <span>{profile?.first_name} {profile?.last_name}</span>
+          </div>
+        )}
 
         <NavLink to="/courses" onClick={() => setIsMenuOpen(false)}>
           <BookOpen size={16} />
