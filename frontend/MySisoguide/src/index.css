@@ -1419,3 +1419,15 @@ a {
 .button.danger:hover {
   background: #b91c1c;
 }
+
+.mobile-login-btn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

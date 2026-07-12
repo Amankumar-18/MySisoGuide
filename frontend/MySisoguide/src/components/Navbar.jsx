@@ -216,72 +216,70 @@ export default function Navbar() {
       </div>
 
       {/* --- MOBILE HAMBURGER BUTTON --- */}
-      <button 
-        className="hamburger-btn" 
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+      
+      {/* --- MOBILE RIGHT SECTION --- */}
+{isLoggedIn ? (
+  <>
+    <button
+      className="hamburger-btn"
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+    >
+      {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+    </button>
 
-      {/* --- MOBILE MENU SLIDER --- */}
-        
+    {/* --- MOBILE MENU SLIDER --- */}
+    <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+      {isLoggedIn && (
+        <div className="mobile-profile-header">
+          <span className="avatar">
+            {profile?.username?.charAt(0).toUpperCase() || "U"}
+          </span>
+          <span>
+            {profile?.first_name} {profile?.last_name}
+          </span>
+        </div>
+      )}
 
+      <NavLink to="/courses" onClick={() => setIsMenuOpen(false)}>
+        <BookOpen size={16} />
+        Courses
+      </NavLink>
 
-      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-
-        {isLoggedIn && (
-          <div className="mobile-profile-header">
-            <span className="avatar">
-              {profile?.username?.charAt(0).toUpperCase() || "U"}
-            </span>
-            <span>{profile?.first_name} {profile?.last_name}</span>
-          </div>
-        )}
-
-        <NavLink to="/courses" onClick={() => setIsMenuOpen(false)}>
-          <BookOpen size={16} />
-          Courses
+      {profile?.role === "ADMIN" && (
+        <NavLink to="/admin" onClick={() => setIsMenuOpen(false)}>
+          <ShieldCheck size={16} />
+          <span>Admin</span>
         </NavLink>
+      )}
 
-        {/* Roles dynamically checked here too */}
-        {profile?.role === "ADMIN" && (
-          <NavLink to="/admin" onClick={() => setIsMenuOpen(false)}>
-            <ShieldCheck size={16} />
-            <span>Admin</span>
-          </NavLink>
-        )}
+      {profile?.role === "SUPERADMIN" && (
+        <NavLink to="/superadmin" onClick={() => setIsMenuOpen(false)}>
+          <ShieldCheck size={16} />
+          <span>Superadmin</span>
+        </NavLink>
+      )}
 
-        {profile?.role === "SUPERADMIN" && (
-          <NavLink to="/superadmin" onClick={() => setIsMenuOpen(false)}>
-            <ShieldCheck size={16} />
-            <span>Superadmin</span>
-          </NavLink>
-        )}
-
-        {/* Mobile Auth Options at the bottom */}
-        {!isLoggedIn ? (
-          <button
-            className="button gold"
-            style={{ marginTop: 'auto', width: '100%' }}
-            onClick={() => {
-              setIsMenuOpen(false);
-              navigate("/login");
-            }}
-          >
-            Login
-          </button>
-        ) : (
-          <button
-            className="logout-btn"
-            onClick={() => {
-              setIsMenuOpen(false);
-              handleLogout();
-            }}
-          >
-            <LogOut size={16} /> Logout
-          </button>
-        )}
-      </div>
+      <button
+        className="logout-btn"
+        onClick={() => {
+          setIsMenuOpen(false);
+          handleLogout();
+        }}
+      >
+        <LogOut size={16} /> Logout
+      </button>
+    </div>
+  </>
+) : (
+  <button
+    className="button gold mobile-login-btn"
+    onClick={() => navigate("/login")}
+  >
+    Login
+  </button>
+)}
+       
+      
     </header>
   );
 }
