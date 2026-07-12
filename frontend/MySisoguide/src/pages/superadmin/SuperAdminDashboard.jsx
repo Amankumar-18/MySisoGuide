@@ -20,7 +20,7 @@ import ActivityTab from "./ActivityTab";
 import AccountTab from "./AccountTab";
 
 export default function SuperAdminDashboard() {
-  const [activeTab, setActiveTab] = useState("courses");
+  const [activeTab, setActiveTab] = useState("users");
 
   const tabs = [
     {
