@@ -40,11 +40,7 @@ export default function AdminDashboard() {
       icon: FileText,
     },
     
-    {
-      id: "account",
-      label: "Account",
-      icon: Key,
-    },
+    
   ];
 
   return (
@@ -107,7 +103,7 @@ export default function AdminDashboard() {
 
           
 
-          {activeTab === "account" && <AccountTab />}
+          
 
         </div>
 
