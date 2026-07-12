@@ -2,12 +2,12 @@
 
 // // // export default function PreviewModal({
 // // //   paper,
-// // //   BASEURL,
+// // //   IMAGEBASEURL,
 // // //   onClose,
 // // // }) {
 // // //   if (!paper) return null;
 
-// // //   const fileUrl = `${BASEURL}${paper.file}`;
+// // //   const fileUrl = `${IMAGEBASEURL}${paper.file}`;
 
 // // //   // const extension = paper.file.split(".").pop().toLowerCase();
 // // //   const extension = paper.file
@@ -101,7 +101,7 @@
 
 // // export default function PreviewModal({
 // //   paper,
-// //   BASEURL,
+// //   IMAGEBASEURL,
 // //   onClose,
 // // }) {
 // //   useEffect(() => {
@@ -115,7 +115,7 @@
 
 // //   if (!paper) return null;
 
-// //   const fileUrl = `${BASEURL}${paper.file}`;
+// //   const fileUrl = `${IMAGEBASEURL}${paper.file}`;
 // //    console.log("paper.file:", paper.file);
 // //   console.log("fileUrl:", fileUrl);
 // //   const extension = paper.file
@@ -231,7 +231,7 @@
 
 // export default function PreviewModal({
 //   paper,
-//   BASEURL,
+//   IMAGEBASEURL,
 //   onClose,
 // }) {
 //   useEffect(() => {
@@ -244,7 +244,7 @@
 
 //   if (!paper) return null;
 
-//   const fileUrl = `${BASEURL}${paper.file}`;
+//   const fileUrl = `${IMAGEBASEURL}${paper.file}`;
 
 //   console.log("paper.file:", paper.file);
 //   console.log("fileUrl:", fileUrl);
@@ -414,7 +414,7 @@
 
 // export default function PreviewModal({
 //   paper,
-//   BASEURL,
+//   IMAGEBASEURL,
 //   onClose,
 // }) {
 //   const [numPages, setNumPages] = useState(0);
@@ -431,7 +431,7 @@
 
 //   if (!paper) return null;
 
-//   const fileUrl = `${BASEURL}${paper.file}`;
+//   const fileUrl = `${IMAGEBASEURL}${paper.file}`;
 
 //   const extension = paper.file
 //     .split("?")[0]
@@ -622,7 +622,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 export default function PreviewModal({
   paper,
-  BASEURL,
+  IMAGEBASEURL,
   onClose,
 }) {
   const [numPages, setNumPages] = useState(0);
@@ -649,10 +649,10 @@ useEffect(() => {
 
   if (!paper) return null;
 
-  // const fileUrl = `${BASEURL}${paper.file}`;
-  const fileUrl = paper.file;
+  const fileUrl = `${IMAGEBASEURL}${paper.file}`;
+  // const fileUrl = paper.file;
 
-  console.log(fileUrl);
+  console.log("Thi is IMAGEBASEURL ", IMAGEBASEURL, "This is FileURL ", fileUrl);
 
   const extension = paper.file
     .split("?")[0]

@@ -137,6 +137,7 @@ import PreviewModal from "../components/PreviewModal";
 
 function Paperspdf() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;
+  const IMAGEBASEURL = import.meta.env.VITE_CLOUDINARY_BASE_URL;
 
   const navigate = useNavigate();
   const { subjectId } = useParams();
@@ -181,6 +182,8 @@ function Paperspdf() {
       setLoading(false);
     }
   };
+
+  console.log("This is ImageURl ",IMAGEBASEURL, "This is ABseURl ", BASEURL)
 
   if (loading) {
     return (
@@ -269,7 +272,7 @@ function Paperspdf() {
 
       <PreviewModal
         paper={selectedPaper}
-        BASEURL={BASEURL}
+        IMAGEBASEURL={IMAGEBASEURL}
         onClose={() => setSelectedPaper(null)}
       />
 
