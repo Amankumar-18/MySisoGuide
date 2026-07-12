@@ -160,6 +160,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <header className="topbar">
       <button
         className="brand"
@@ -291,7 +292,9 @@ export default function Navbar() {
   </button>
 )}
        
-      <ChangePasswordModal
+      
+    </header>
+    <ChangePasswordModal
               isOpen={modalOpen}
               onClose={() => {
                 setModalOpen(false);
@@ -299,6 +302,6 @@ export default function Navbar() {
               }}
               
             />
-    </header>
+    </>
   );
 }
