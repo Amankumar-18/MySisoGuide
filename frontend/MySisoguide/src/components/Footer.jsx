@@ -2,11 +2,11 @@ function Footer() {
   return (
     <footer className="footer">
       <div>
-        <strong className="font-serif">SisoGuide</strong>
+        <strong className="font-serif">PaperVoult</strong>
         <span> · PYQ Archive</span>
       </div>
       <span>
-        © 2026 SisoGuide. All papers belong to their respective institutions.
+        © 2026 PaperVoult. All papers belong to their respective institutions.
       </span>
     </footer>
   );

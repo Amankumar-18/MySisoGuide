@@ -36,7 +36,7 @@ export default function Home() {
         </h1>
 
         <p>
-          SisoGuide is a curated archive of previous year question papers
+          PaperVoult is a curated archive of previous year question papers
           across courses, subjects and years, verified by admins and ready
           when you need to study.
         </p>

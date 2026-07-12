@@ -169,7 +169,7 @@ export default function Navbar() {
         <span className="brand-mark">
           <BookOpen size={24} />
         </span>
-        <span className="font-serif">SisoGuide</span>
+        <span className="font-serif">PaperVoult</span>
       </button>
 
       {/* --- DESKTOP NAV --- */}
