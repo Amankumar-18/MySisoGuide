@@ -77,10 +77,10 @@ class Paper(models.Model):
         default="END"
     )
 
-    # file = models.FileField(
-    #     upload_to="papers/"
-    # )
-    file = CloudinaryField(resource_type="raw")
+    file = models.FileField(
+        upload_to="papers/"
+    )
+    
 
     uploaded_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
