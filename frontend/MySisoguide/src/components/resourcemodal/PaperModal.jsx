@@ -143,6 +143,7 @@ onClose();
           <label>
             Course
             <select
+              className="input"
               name="course"
               value={form.course}
               onChange={handleChange}
@@ -164,6 +165,7 @@ onClose();
           <label>
             Subject
             <select
+              className="input"
               name="subject"
               value={form.subject}
               onChange={handleChange}
@@ -185,6 +187,7 @@ onClose();
           <label>
             Title
             <input
+              className="input"
               type="text"
               name="title"
               value={form.title}
@@ -196,6 +199,8 @@ onClose();
           <label>
             Year
             <input
+              
+              className="input"
               type="number"
               name="year"
               value={form.year}
@@ -207,6 +212,7 @@ onClose();
           <label>
             Exam Type
             <select
+              className="input"
               name="exam_type"
               value={form.exam_type}
               onChange={handleChange}
@@ -221,6 +227,7 @@ onClose();
           <label>
             PDF / Image
             <input
+              className="input"
               type="file"
               name="file"
               accept=".pdf,.jpg,.jpeg,.png,.webp"

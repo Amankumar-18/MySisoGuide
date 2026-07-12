@@ -9,6 +9,7 @@ import DeleteConfirmModal from "../../components/resourcemodal/DeleteConfirmModa
 
 export default function PapersTab() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;
+  const PDFBASEURL=import.meta.env.VITE_CLOUDINARY_BASE_URL;
 
   const token = getAccessToken();
   const [selectedPaper, setSelectedPaper] = useState(null);
@@ -154,7 +155,7 @@ export default function PapersTab() {
               <SuperadminPapercard
                 key={paper.id}
                 paper={paper}
-                BASEURL={BASEURL}
+                PDFBASEURL={PDFBASEURL}
                 onPreview={setSelectedPaper}
                 onEdit={() => {
                   setEditPaper(paper);
@@ -186,7 +187,7 @@ export default function PapersTab() {
       />
       <PreviewModal
     paper={selectedPaper}
-    BASEURL={BASEURL}
+    IMAGEBASEURL={PDFBASEURL}
     onClose={() => setSelectedPaper(null)}
 />
 

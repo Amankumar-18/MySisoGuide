@@ -7,15 +7,15 @@ import { useState } from "react";
 
 export default function SuperadminPapercard({
     paper,
-    BASEURL,
+    PDFBASEURL,
     onPreview,
     onEdit,
     onDelete,
 }) {
-  const fileUrl = paper.file;
+  const fileUrl = `${PDFBASEURL}${paper.file}`;
 
   
-   
+   console.log('THis is my url',fileUrl,'this is Pdfbaseurl',PDFBASEURL);
 
   const handleDownload = async () => {
     try {
