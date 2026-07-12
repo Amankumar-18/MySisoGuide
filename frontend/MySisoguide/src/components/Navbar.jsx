@@ -111,8 +111,9 @@
 
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { BookOpen, LogOut, ShieldCheck, Menu, X } from "lucide-react";
+import { BookOpen, LogOut, ShieldCheck, Menu, X, KeyRound } from "lucide-react";
 import { getAccessToken, clearTokens } from "../utils/auth";
+import ChangePasswordModal from "./resourcemodal/ChangePasswordModal";
 
 export default function Navbar() {
   const BASEURL = import.meta.env.VITE_DJANGO_BASE_URL;
@@ -123,6 +124,7 @@ export default function Navbar() {
 
   const token = getAccessToken();
   const isLoggedIn = !!token;
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     if (!token) return;
@@ -258,6 +260,16 @@ export default function Navbar() {
           <span>Superadmin</span>
         </NavLink>
       )}
+      <button
+  className="menu-btn"
+  onClick={() => {
+    setIsMenuOpen(false);
+    setModalOpen(true);
+  }}
+>
+  <KeyRound size={16} />
+  Change Password
+</button>
 
       <button
         className="logout-btn"
@@ -279,7 +291,14 @@ export default function Navbar() {
   </button>
 )}
        
-      
+      <ChangePasswordModal
+              isOpen={modalOpen}
+              onClose={() => {
+                setModalOpen(false);
+                
+              }}
+              
+            />
     </header>
   );
 }
