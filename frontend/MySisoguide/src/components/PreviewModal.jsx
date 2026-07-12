@@ -652,6 +652,8 @@ useEffect(() => {
   // const fileUrl = `${BASEURL}${paper.file}`;
   const fileUrl = paper.file;
 
+  console.log(fileUrl);
+
   const extension = paper.file
     .split("?")[0]
     .split(".")
@@ -674,6 +676,7 @@ useEffect(() => {
     a.click();
 
     URL.revokeObjectURL(url);
+    console.log(url);
   };
 
   return (
