@@ -209,6 +209,16 @@ export default function Navbar() {
               <span>{profile?.first_name} {profile?.last_name}</span>
             </div>
             <button
+  className="menu-btn"
+  onClick={() => {
+    setIsMenuOpen(false);
+    setModalOpen(true);
+  }}
+>
+  <KeyRound size={16} />
+ 
+</button>
+            <button
               onClick={handleLogout}
               title="Logout"
             >
