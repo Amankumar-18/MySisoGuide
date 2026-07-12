@@ -15,28 +15,9 @@ export default function SuperadminPapercard({
   const fileUrl = `${PDFBASEURL}${paper.file}`;
 
   
-   console.log('THis is my url',fileUrl,'this is Pdfbaseurl',PDFBASEURL);
+   
 
-  const handleDownload = async () => {
-    try {
-      const response = await fetch(fileUrl);
-      const blob = await response.blob();
-
-      const url = window.URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = paper.title;
-
-      document.body.appendChild(link);
-      link.click();
-
-      link.remove();
-      window.URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  
 
   return (
     <>
@@ -90,14 +71,7 @@ export default function SuperadminPapercard({
           Preview
         </button>
 
-        <button
-          className="download-btn"
-          onClick={handleDownload}
-        >
-          <Download size={18}/>
-          Download
-        </button>
-
+        
       </div>
 
     </article>
