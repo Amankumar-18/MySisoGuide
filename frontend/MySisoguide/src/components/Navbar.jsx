@@ -125,6 +125,7 @@ export default function Navbar() {
   const token = getAccessToken();
   const isLoggedIn = !!token;
   const [modalOpen, setModalOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     if (!token) return;
@@ -174,7 +175,7 @@ export default function Navbar() {
 
       {/* --- DESKTOP NAV --- */}
       <nav className="nav">
-        <NavLink to="/courses">Courses</NavLink>
+        <NavLink to="/courses"><BookOpen size={16} /><span>Courses</span></NavLink>
 
         {profile?.role === "ADMIN" && (
           <NavLink to="/admin">
@@ -201,31 +202,64 @@ export default function Navbar() {
             Login
           </button>
         ) : (
-          <div className="profile">
-            <div className="profile-email">
-              <span className="avatar">
-                {profile?.username?.charAt(0).toUpperCase() || "U"}
-              </span>
-              <span>{profile?.first_name} {profile?.last_name}</span>
-            </div>
-            <button
-              title="Change Password"
-              className="menu-btn"
-              onClick={() => {
-                  setIsMenuOpen(false);
-                  setModalOpen(true);
-              }}
-            >
-              <KeyRound size={16} />
+          // <div className="profile">
+          //   <div className="profile-email">
+          //     <span className="avatar">
+          //       {profile?.username?.charAt(0).toUpperCase() || "U"}
+          //     </span>
+          //     <span>{profile?.first_name} {profile?.last_name}</span>
+          //   </div>
+          //   <button
+          //     title="Change Password"
+          //     className="menu-btn"
+          //     onClick={() => {
+          //         setIsMenuOpen(false);
+          //         setModalOpen(true);
+          //     }}
+          //   >
+          //     <KeyRound size={16} />
  
-            </button>
-            <button
-              onClick={handleLogout}
-              title="Logout"
-            >
-              <LogOut size={20} />
-            </button>
-          </div>
+          //   </button>
+          //   <button
+          //     onClick={handleLogout}
+          //     title="Logout"
+          //   >
+          //     <LogOut size={20} />
+          //   </button>
+          // </div>
+          <div className="profile">
+  <div
+    className="profile-email"
+    onClick={() => setShowMenu(!showMenu)}
+    style={{ cursor: "pointer" }}
+  >
+    <span className="avatar">
+      {profile?.username?.charAt(0).toUpperCase() || "U"}
+    </span>
+    <span>
+      {profile?.first_name} {profile?.last_name}
+    </span>
+  </div>
+
+  {showMenu && (
+    <div className="profile-menu">
+      <button
+        onClick={() => {
+          setModalOpen(true);
+          setShowMenu(false);
+        }}
+      >
+        <KeyRound size={16} /> Change Password
+      </button>
+
+      <button
+        onClick={handleLogout}
+      >
+        <LogOut size={16} /> Logout
+      </button>
+    </div>
+  )}
+</div>
         )}
       </div>
 
