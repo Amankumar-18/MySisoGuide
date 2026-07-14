@@ -53,11 +53,7 @@ export default function SuperAdminDashboard() {
       label: "Activity",
       icon: Activity,
     },
-    {
-      id: "account",
-      label: "Account",
-      icon: Key,
-    },
+    
   ];
 
   return (
@@ -122,8 +118,7 @@ export default function SuperAdminDashboard() {
 
           {activeTab === "activity" && <ActivityTab />}
 
-          {activeTab === "account" && <AccountTab />}
-
+          
         </div>
 
       </div>
